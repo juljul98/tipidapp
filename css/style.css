@@ -1,0 +1,14 @@
+body { font-family: 'Shadows Into Light'; font-size: 14px; }
+input { margin-bottom: 10px!important;}
+input[type="checkbox"] { margin-bottom: 20px!important; position: static!important;}
+.input-field { margin-top: 5px!important; }
+.clearfix:before, .clearfix:after { display: table; content: ''; } 
+.clearfix:after { clear: both; }
+.row { margin-bottom: 5px!important; }
+.register-form { margin-top: 20px!important;}
+.login-form-text { font-weight: bold; font-size: 18px; font-size: 20px; }
+.login-form, .forgot-form { position: fixed; top: 50%; left: 0; right: 0; margin: 0 2rem; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
+.modal { z-index: 9999; top: 0; }
+.has-error input { border-bottom: 1px solid #c0392b; }
+.has-error label, .has-error .err-message { color: #c0392b; }
+.err-message { text-align: left; margin-top: 0!important; font-size: 14px;}

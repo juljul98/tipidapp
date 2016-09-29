@@ -1,0 +1,63 @@
+<form class="register-form" name="registerForm" ng-submit="registerForm" novalidate>
+  <div class="row">
+      <div class="input-field col s12 center main_logo">
+          <img src="images/main_logo.png" alt="" class="responsive-img valign profile-image-login">
+          <p class="center login-form-text">Tipidapp | {{ page }} </p>
+    </div>
+  </div>
+  <div class="row margin">
+    <div class="input-field col s12" ng-class="{ 'has-error' : registerForm.email.$invalid  }">
+      <input class="validate" id="email" type="email" name="email">
+      <label for="email" data-error="wrong" data-success="right">Email</label>
+      <p class="err-message"></p>
+    </div>
+  </div>
+  <div class="row margin">
+    <div class="input-field col s12">
+      <input class="validate" id="email" type="email">
+      <label for="email" data-error="wrong" data-success="right">Username</label>
+      <p class="err-message"></p>
+    </div>
+  </div>
+  <div class="row margin">
+    <div class="input-field col s12">
+      <input id="password" type="password">
+      <label for="password">Password</label>
+      <p class="err-message"></p>
+    </div>
+  </div>
+  <div class="row margin">
+    <div class="input-field col s12">
+      <input id="password" type="password">
+      <label for="password">Confirm Password</label>
+      <p class="err-message"></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <input type="checkbox" id="terms">
+      <label for="terms">I accept the <a ng-click="modaltriggeropen()">terms and conditions</a></label>
+   
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s12">
+      <a href="login.html" class="btn waves-effect waves-light col s12">Register</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6 m6 l6">
+        <p class="margin medium-small"><a href="#/">Back to login</a></p>
+    </div>         
+  </div>
+</form>
+
+<div id="modalterms" class="modal bottom-sheet">
+  <div class="modal-content">
+    <h4>Terms and Conditions</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum debitis quaerat provident a ea, iure voluptatum illum ex possimus ratione, nesciunt commodi velit laboriosam cum, ipsam quas aliquid atque! Voluptas laudantium error ut facilis animi quidem ea, esse eligendi atque odio consectetur quis aspernatur maiores ipsa velit nisi quod molestiae, ipsum nobis. Officia dolorem nesciunt, quas aliquam assumenda iusto voluptas dolore, cupiditate optio! Rem, nemo eos laboriosam ullam adipisci, ab, facilis saepe illo enim sunt ea magnam explicabo. Officiis possimus illo sunt doloribus, at eos alias laudantium adipisci magni sapiente recusandae veniam nostrum, animi enim quis dolorem necessitatibus totam dicta?</p>
+  </div>
+  <div class="modal-footer">
+    <a ng-click="modaltriggerclose()" class="ewaves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
