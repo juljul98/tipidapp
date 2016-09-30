@@ -1,5 +1,10 @@
-<nav>
-  <li></li>
-  <li></li>
-  <li></li>
-</nav>
+<div ng-controller="NavigationController">
+	<header>Tipidapp</header>
+	<ul class="navigation clearfix">
+		<li ng-repeat="items in navigation">
+		  <p ng-class="{ 'active' : activeMenu === items }">
+		  	<a class="waves-effect waves-light" ng-click="setActive(items)" href="#{{ items }}">{{ items }}</a>
+		  </p>
+	   </li>
+	</ul>
+</div>

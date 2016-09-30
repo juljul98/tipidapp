@@ -12,12 +12,14 @@ tipidapp.config(function($routeProvider) {
 		templateUrl : 'pages/auth/forgot.html',
 		controller : 'ForgotController'
 	})
-	.when('/dashboard', {
-		templateUrl : 'pages/dashboard/dashboard.html',
-		controller: 'DashboardController'
+	.when('/home', {
+		templateUrl : 'pages/dashboard/home.html',
+		controller: 'HomeController'
+	})
+	.when('/tools', {
+		templateUrl : 'pages/dashboard/tools.html'
 	})
 	.when('/settings', {
 		templateUrl : 'pages/dashboard/settings.html'
 	})
 });
-

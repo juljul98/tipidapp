@@ -1,6 +1,11 @@
-body { font-family: 'Shadows Into Light'; font-size: 14px; }
+body { font-family: 'Shadows Into Light'; font-size: 13px; letter-spacing: 2px; }
+.rb { font-family: 'Roboto', sans-serif; letter-spacing: 0; }
 input { margin-bottom: 10px!important;}
 input[type="checkbox"] { margin-bottom: 20px!important; position: static!important;}
+p { margin: 0; }
+.fr { float: right; }
+.fl { float: left; }
+.wrapper { margin: 15px 10px!important; letter-spacing: 1px; }
 .input-field { margin-top: 5px!important; }
 .clearfix:before, .clearfix:after { display: table; content: ''; } 
 .clearfix:after { clear: both; }
@@ -11,4 +16,32 @@ input[type="checkbox"] { margin-bottom: 20px!important; position: static!importa
 .modal { z-index: 9999; top: 0; }
 .has-error input { border-bottom: 1px solid #c0392b; }
 .has-error label, .has-error .err-message { color: #c0392b; }
-.err-message { text-align: left; margin-top: 0!important; font-size: 14px;}
+.err-message { text-align: left; margin-top: 0!important; font-size: 14px; }
+header { font-weight: bold; font-size: 20px; text-align: center; background-color: #16a085; padding: 1rem 0; color: #fff; border-bottom: 1px dotted #fff;}
+ul.navigation { background-color: #26a69a; margin: 0; }
+ul.navigation li { width: 33.3%; text-align: center; font-weight: bold; float: left; border-right: 1px solid #fff; }
+
+ul.navigation li p.active { background-color: #1abc9c;}
+ul.navigation li:last-child { border-right: none; }
+ul.navigation li a { color: #fff; padding: 10px 0; display: block; text-transform: capitalize; }
+
+ul.toolitems li a img { width: 100%; height: auto; }
+ul.toolitems li {float: left; margin: 0 10px 10px 0; width: 31.5%;}
+ul.toolitems li:nth-child(3n) { margin-right: 0; }
+
+.healthimg { margin-right: 3%; height: 50px;}
+.healthimg img { width: 50px; height: auto; }
+.healthlist { padding: 2%; border: 1px solid #ccc; position: relative;}
+.healthinfo { width: 78%; }
+.healthinfo .healthtitle { font-weight: bold; font-size: 16px;}
+.healthtime { color: #666; font-size: 10px;}
+.healthtime i{ margin-right: 5px; display: inline-block; vertical-align: middle; }
+.healthtime span {display: inline-block; vertical-align: middle;padding-top: 1px;}
+.healthinfo .healthtitle { width: 70%!important; }
+.healthinfo .healthdesc, .healthinfo .healthtitle { text-overflow: ellipsis; width: 100%; overflow: hidden; white-space: nowrap;}
+.minilinks { position: absolute; top: 4%; right: 4%;}
+.fileupload { width: 23px; height: auto; margin-right: 5px; }
+.share { width: 23px; height: auto; }
+@media screen and (max-width: 410px) {
+	/*.healthinfo { width: 80%; }*/
+}

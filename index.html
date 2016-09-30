@@ -7,11 +7,14 @@
 	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-
+<body ng-controller="MainController">
+	<div ng-show="navbar">
+		<div ng-include="'pages/includes/nav.html'"></div>
+	</div>
 		<div ng-view="">
 		</div>
 
@@ -27,12 +30,15 @@
 
 	<!-- Angularjs Routing -->
 	<script src="js/route/route.js"></script>
+
 	
 	<!-- Angularjs Controllers -->
+	<script src="js/controller/MainController.js" type="text/javascript"></script>
 	<script src="js/controller/RegisterController.js" type="text/javascript"></script>
 	<script src="js/controller/LoginController.js" type="text/javascript"></script>
 	<script src="js/controller/ForgotController.js" type="text/javascript"></script>
-	<script src="js/controller/DashboardController.js" type="text/javascript"></script>
+	<script src="js/controller/NavigationController.js" type="text/javascript"></script>
+	<script src="js/controller/HomeController.js" type="text/javascript"></script>
 
 </body>
 </html>

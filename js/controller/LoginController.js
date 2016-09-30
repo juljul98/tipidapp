@@ -1,3 +1,4 @@
-tipidapp.controller('LoginController', function($scope) {
+tipidapp.controller('LoginController', function($scope, $route) {
 	$scope.page = 'Login';
+
 });
