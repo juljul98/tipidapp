@@ -6,4 +6,5 @@ tipidapp.controller('NavigationController', function($scope) {
     $scope.setActive = function(navigation) {
     	$scope.activeMenu = navigation
 	}
+	
 });

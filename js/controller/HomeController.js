@@ -3,4 +3,5 @@ tipidapp.controller('HomeController', function($scope) {
 	$scope.share = function() {
 		$('#modalsocial').openModal();
 	}
+
 });

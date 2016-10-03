@@ -1,5 +1,9 @@
 <div ng-controller="NavigationController">
-	<header>Tipidapp</header>
+	<header class="clearfix">
+		<span class="apptitle">Tipidapp</span>
+		<span class="searchbar"><input class="searchbar" type="text" placeholder="Search"></span>
+		<i class="material-icons searchbutton">search</i>
+	</header>
 	<ul class="navigation clearfix">
 		<li ng-repeat="items in navigation">
 		  <p ng-class="{ 'active' : activeMenu === items }">
