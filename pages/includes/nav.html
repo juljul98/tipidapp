@@ -1,14 +1,17 @@
 <div ng-controller="NavigationController">
-	<header class="clearfix">
-		<span class="apptitle">Tipidapp</span>
-		<span class="searchbar"><input class="searchbar" type="text" placeholder="Search"></span>
-		<i class="material-icons searchbutton">search</i>
-	</header>
-	<ul class="navigation clearfix">
-		<li ng-repeat="items in navigation">
-		  <p ng-class="{ 'active' : activeMenu === items }">
-		  	<a class="waves-effect waves-light" ng-click="setActive(items)" href="#{{ items }}">{{ items }}</a>
-		  </p>
-	   </li>
-	</ul>
+	<div class="headerblock">
+		<header class="clearfix" ng-class="{ 'active' : toggleactive === true }">
+			<span class="backbutton" ng-click="backbutton()"><img src="images/backbutton.png"></span>
+			<span class="apptitle">Tipidapp</span>
+			<span class="searchbar"><input type="text" placeholder="Search"></span>
+			<span ng-click="togglesearch()"><i class="material-icons searchbutton">{{ toggleaction }}</i></span>
+		</header>
+		<ul class="navigation clearfix">
+			<li ng-repeat="items in navigation">
+			  <p ng-class="{ 'active' : activeMenu === items }">
+			  	<a class="waves-effect waves-light" ng-click="setActive(items)" href="#{{ items }}">{{ items }}</a>
+			  </p>
+		   </li>
+		</ul>
+	</div>
 </div>

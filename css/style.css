@@ -1,11 +1,10 @@
 body { font-family: 'Shadows Into Light'; font-size: 13px; letter-spacing: 2px; }
-
 input { margin-bottom: 10px!important;}
 input[type="checkbox"] { margin-bottom: 20px!important; position: static!important;}
 p { margin: 0; }
 .fr { float: right; }
 .fl { float: left; }
-.wrapper { margin: 15px 10px!important; letter-spacing: 1px; }
+.wrapper { margin: 118px 10px 15px!important; letter-spacing: 1px; }
 .input-field { margin-top: 5px!important; }
 .clearfix:before, .clearfix:after { display: table; content: ''; } 
 .clearfix:after { clear: both; }
@@ -18,25 +17,36 @@ p { margin: 0; }
 .has-error label, .has-error .err-message { color: #c0392b; }
 .err-message { text-align: left; margin-top: 0!important; font-size: 14px; }
 
+.headerblock { position: fixed; top: 0; width: 100%; }
 header { text-align: center; font-weight: bold; font-size: 20px; background-color: #16a085; padding: 1rem 0; color: #fff; border-bottom: 1px dotted #fff;}
-header i { margin: 6px 10px 0 -10px; }
-.searchbar { background-color: #0c594a!important; color: #fff; width: 83%!important; border-radius: 5px!important; margin-bottom: 0!important;}
+.backbutton { position: absolute; top: 17px; left: 10px; }
+.backbutton img { width: 27px; height: auto; }
+.apptitle {  transition: all .2s linear; visibility: visible; opacity: 1; height: auto;}
+.searchbar { background-color: #0c594a!important; color: #fff; border-radius: 5px!important; margin-bottom: 0!important;  width: 0!important; margin-right: 10px; float: right; border-bottom: none; transition: all .3s ease;}
 .searchbutton { position: absolute; top: 14px; right: 10px; font-size: 32px;}
-.searchbar { text-indent: 14px; }
+.searchbar input { text-indent: 14px; border-bottom: none; margin-bottom: 0!important; height: 32px!important; }
+.searchbar input:active, .searchbar input:focus { border-bottom: none!important; }
+header.active .apptitle { visibility: hidden; opacity: 0; font-size: 0; height: 0!important; }
+header.active .searchbar {  width: 94%!important; }
 
 ul.navigation { background-color: #26a69a; margin: 0; }
 ul.navigation li { width: 33.3%; text-align: center; font-weight: bold; float: left; border-right: 1px solid #fff; }
-
+ul.navigation li p { border-bottom: 2px solid transparent;}
 ul.navigation li p.active { background-color: #1abc9c; border-bottom: 2px solid #2980b9;}
 ul.navigation li:last-child { border-right: none; }
 ul.navigation li a { color: #fff; padding: 10px 0; display: block; text-transform: capitalize; }
 
+ul.toolitems li {float: left; margin: 0 10px 10px 0; width: 100px; -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);}
+ul.toolitems li a { font-size: 0; display: block; }
 ul.toolitems li a img { width: 100%; height: auto; }
-ul.toolitems li {float: left; margin: 0 10px 10px 0; width: 100px;}
 
 .healthimg { margin-right: 3%; height: 50px;}
 .healthimg img { width: 50px; height: auto; }
-.healthlist { padding: 10px; border: 1px solid #ccc; position: relative;}
+.healthlist { padding: 10px; border: 1px solid #ccc; position: relative; margin-bottom: 10px; -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
+box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);}
 .healthinfo { width: 78%; }
 .healthinfo .healthtitle { font-weight: bold; font-size: 16px;}
 .healthtime { color: #666; font-size: 10px;}
@@ -44,18 +54,53 @@ ul.toolitems li {float: left; margin: 0 10px 10px 0; width: 100px;}
 .healthtime span {display: inline-block; vertical-align: middle;padding-top: 1px;}
 .healthinfo .healthtitle { width: 70%!important; }
 .healthinfo .healthdesc, .healthinfo .healthtitle { text-overflow: ellipsis; width: 100%; overflow: hidden; white-space: nowrap; }
+.deletepost { color: #666; position: relative; top: -1px; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: #666;}
 .minilinks { position: absolute; top: 10px; right: 10px; }
 .fileupload { width: 20px; height: auto; margin-right: 5px; }
-.share { width: 20px; height: auto; }
+.share { width: 20px; height: auto; font-weight: bold;}
+.healthimage ul { margin-top: 15px; }
+.healthimage ul li { float: left; width: 120px; height: auto; margin-right: 15px; position: relative; margin-top: 15px;  }
+.healthimage ul li .imagecancel { position: absolute; top: -11px; right: -11px; color: #16a085;}
+.healthimage ul li img { width: 100%; height: auto; }
+#modalimages .modal-content { padding: 0!important; font-size: 0;}
 
 ul.sociallinks li{ float: left; width: 40px; margin-right: 10px }
 ul.sociallinks li img { width: 100%; height: auto; }
 ul.sociallinks li:nth-child(3n) { margin-right: 0; }
 .modalsocial { padding: 10px 24px 0!important;}
 
+.settinglist li { margin-bottom: 10px; position: relative; }
+.settinglist li:after { position: absolute; top: 5px; right: 2px; background: url('/images/more.png') no-repeat; background-size: 40% 40%; width: 12px; height: 28px; content: '';}
+.settinglist li:last-child:after { background: none; }
+.settinglist li a { color: #666; display: block; padding: 1px 1px 5px 1px; border-bottom: 1px solid #16a085; font-weight: bold; }
+.settinglist li a i { display: inline-block; vertical-align: middle; color: #16a085;}
 
+@media screen and (max-width: 835px) {
+	header.active .searchbar {
+    	width: 92%!important;
+	}
+}
+@media screen and (max-width: 635px) {
+	header.active .searchbar {
+    	width: 90%!important;
+	}
+}
+@media screen and (max-width: 510px) {
+	header.active .searchbar {
+    	width: 88%!important;
+	}
+}
 @media screen and (max-width: 460px) {
 	ul.toolitems li { width: 31%;}
 	ul.toolitems li:nth-child(3n) { margin-right:0;}
-
+}
+@media screen and (max-width: 420px) {
+	header.active .searchbar {
+    	width: 86%!important;
+	}
+}
+@media screen and (max-width: 360px) {
+	header.active .searchbar {
+    	width: 84%!important;
+	}
 }
