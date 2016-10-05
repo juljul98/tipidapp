@@ -1,9 +1,17 @@
 body { font-family: 'Shadows Into Light'; font-size: 13px; letter-spacing: 2px; }
 input { margin-bottom: 10px!important;}
 input[type="checkbox"] { margin-bottom: 20px!important; position: static!important;}
+input, a, button, span, p, div {
+	-webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+    -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
 p { margin: 0; }
 .fr { float: right; }
 .fl { float: left; }
+.tal { text-align: left; }
+.tar { text-align: right; }
 .wrapper { margin: 118px 10px 15px!important; letter-spacing: 1px; }
 .input-field { margin-top: 5px!important; }
 .clearfix:before, .clearfix:after { display: table; content: ''; } 
@@ -18,15 +26,16 @@ p { margin: 0; }
 .err-message { text-align: left; margin-top: 0!important; font-size: 107%; }
 
 .headerblock { position: fixed; top: 0; width: 100%; }
-header { text-align: center; font-weight: bold; font-size: 154%; background-color: #16a085; padding: 1rem 0; color: #fff; border-bottom: 1px dotted #fff;}
-.backbutton { position: absolute; top: 17px; left: 10px; }
-.backbutton img { width: 27px; height: auto; }
-.apptitle {  transition: all .2s linear; visibility: visible; opacity: 1; height: auto;}
-.searchbar { background-color: #0c594a!important; color: #fff; border-radius: 5px!important; margin-bottom: 0!important;  width: 0!important; margin-right: 10px; float: right; border-bottom: none; transition: all .3s ease;}
-.searchbutton { position: absolute; top: 14px; right: 10px; font-size: 246%;}
-.searchbar input { text-indent: 14px; border-bottom: none; margin-bottom: 0!important; height: 32px!important; }
+header { height: 60px;  font-weight: bold; background-color: #16a085; padding: .5rem 0; color: #fff; border-bottom: 1px dotted #fff; position: relative;}
+.backbutton img, .searchbar, .searchbutton, .apptitle, .settinglist li i.tar { position: absolute; top: 50%; transform: translateY(-50%); }
+.backbutton img { width: 23px; height: auto; left: 10px;}
+.apptitle {  transition: all .2s linear; visibility: visible; opacity: 1; height: auto; font-size: 154%; left: 50%; transform: translate(-50%, -50%);}
+.searchbar { right: 0; background-color: #0c594a!important; color: #fff; border-radius: 5px!important; margin-bottom: 0!important;  width: 0!important; margin-right: 10px; float: right; border-bottom: none; transition: all .3s ease;}
+.searchbutton { right: 10px; line-height: 0!important;}
+.searchbutton i { font-size: 30px; }
+.searchbar input { text-indent: 14px; border-bottom: none; margin-bottom: 0!important; height: 32px!important; font-size: 83%; }
 .searchbar input:active, .searchbar input:focus { border-bottom: none!important; }
-header.active .apptitle { visibility: hidden; opacity: 0; font-size: 0; height: 0!important; }
+header.active .apptitle { visibility: hidden; opacity: 0; font-size: 0; }
 header.active .searchbar {  width: 94%!important; }
 
 ul.navigation { background-color: #26a69a; margin: 0; }
@@ -54,16 +63,16 @@ box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);}
 .healthtime span {display: inline-block; vertical-align: middle;padding-top: 1px;}
 .healthinfo .healthtitle { width: 70%!important; }
 .healthinfo .healthdesc, .healthinfo .healthtitle { text-overflow: ellipsis; width: 100%; overflow: hidden; white-space: nowrap; }
-.deletepost { color: #666; position: relative; top: -1px; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: #666;}
+
 .minilinks { position: absolute; top: 10px; right: 10px; }
 .minilinks li { margin-right: 5px; }
 .minilinks li:nth-child(4) { margin-right: 0;}
-.fileuploadvideo { margin-right: 2px; color: #666; position: relative; top: -3px; font-size: 215%; }
-.fileuploadimage { width: 20px; height: auto; margin-right: 5px; }
+.minilinks li i { color: #666; }
+
 .share { width: 20px; height: auto; font-weight: bold;}
 .healthimage ul { margin-top: 15px; }
 .healthimage ul li { float: left; width: 120px; height: auto; margin-right: 15px; position: relative; margin-top: 15px;  }
-.healthimage ul li .imagecancel { position: absolute; top: -11px; right: -11px; color: #16a085;}
+.healthimage ul li .imagecancel { position: absolute; top: -11px; right: -11px; color: #16a085; font-size: 21px; }
 .healthimage ul li img { width: 100%; height: auto; }
 #modalimages .modal-content { padding: 0!important; font-size: 0;}
 
@@ -73,13 +82,17 @@ ul.sociallinks li:nth-child(3n) { margin-right: 0; }
 .modalsocial { padding: 10px 24px 0!important;}
 
 .settinglist li { position: relative; }
-.settinglist li:after { position: absolute; top: 16px; right: 2px; background: url('/images/more.png') no-repeat; background-size: 40% 40%; width: 12px; height: 28px; content: '';}
-.settinglist li:last-child:after { background: none; }
+.settinglist li i { right: 10px; }
 .settinglist li a { color: #666; display: block; line-height: 3rem; font-weight: bold; }
 .settinglist li a i { display: inline-block; vertical-align: middle; color: #16a085;}
+.settinglist li a i.tar { font-size: 22px; }
 
 .collapsible-header { color: #666; font-weight: bold; }
 .collapsible-header i { font-weight: normal; color: #16a085;}
+.collapsible-body { padding: .5rem 2rem!important; }
+.collapsible-body p { padding: 0!important; }
+.settingtitle { font-weight: bold; }
+.settingtitle, .fontfamily, .fontsize { margin-bottom: 8px; }
 
 @media screen and (max-width: 835px) {
 	header.active .searchbar {
