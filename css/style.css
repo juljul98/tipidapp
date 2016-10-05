@@ -10,20 +10,20 @@ p { margin: 0; }
 .clearfix:after { clear: both; }
 .row { margin-bottom: 5px!important; }
 .register-form { margin-top: 20px!important;}
-.login-form-text { font-weight: bold; font-size: 18px; font-size: 20px; }
+.login-form-text { font-weight: bold; font-size: 138%; }
 .login-form, .forgot-form { position: fixed; top: 50%; left: 0; right: 0; margin: 0 2rem; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
 .modal { z-index: 9999; top: 0; }
 .has-error input { border-bottom: 1px solid #c0392b; }
 .has-error label, .has-error .err-message { color: #c0392b; }
-.err-message { text-align: left; margin-top: 0!important; font-size: 14px; }
+.err-message { text-align: left; margin-top: 0!important; font-size: 107%; }
 
 .headerblock { position: fixed; top: 0; width: 100%; }
-header { text-align: center; font-weight: bold; font-size: 20px; background-color: #16a085; padding: 1rem 0; color: #fff; border-bottom: 1px dotted #fff;}
+header { text-align: center; font-weight: bold; font-size: 154%; background-color: #16a085; padding: 1rem 0; color: #fff; border-bottom: 1px dotted #fff;}
 .backbutton { position: absolute; top: 17px; left: 10px; }
 .backbutton img { width: 27px; height: auto; }
 .apptitle {  transition: all .2s linear; visibility: visible; opacity: 1; height: auto;}
 .searchbar { background-color: #0c594a!important; color: #fff; border-radius: 5px!important; margin-bottom: 0!important;  width: 0!important; margin-right: 10px; float: right; border-bottom: none; transition: all .3s ease;}
-.searchbutton { position: absolute; top: 14px; right: 10px; font-size: 32px;}
+.searchbutton { position: absolute; top: 14px; right: 10px; font-size: 246%;}
 .searchbar input { text-indent: 14px; border-bottom: none; margin-bottom: 0!important; height: 32px!important; }
 .searchbar input:active, .searchbar input:focus { border-bottom: none!important; }
 header.active .apptitle { visibility: hidden; opacity: 0; font-size: 0; height: 0!important; }
@@ -48,15 +48,18 @@ ul.toolitems li a img { width: 100%; height: auto; }
 -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);
 box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.25);}
 .healthinfo { width: 78%; }
-.healthinfo .healthtitle { font-weight: bold; font-size: 16px;}
-.healthtime { color: #666; font-size: 10px;}
+.healthinfo .healthtitle { font-weight: bold; font-size: 123%;}
+.healthtime { color: #666; font-size: 76%;}
 .healthtime i{ margin-right: 5px; display: inline-block; vertical-align: middle; }
 .healthtime span {display: inline-block; vertical-align: middle;padding-top: 1px;}
 .healthinfo .healthtitle { width: 70%!important; }
 .healthinfo .healthdesc, .healthinfo .healthtitle { text-overflow: ellipsis; width: 100%; overflow: hidden; white-space: nowrap; }
 .deletepost { color: #666; position: relative; top: -1px; -webkit-text-stroke-width: .5px; -webkit-text-stroke-color: #666;}
 .minilinks { position: absolute; top: 10px; right: 10px; }
-.fileupload { width: 20px; height: auto; margin-right: 5px; }
+.minilinks li { margin-right: 5px; }
+.minilinks li:nth-child(4) { margin-right: 0;}
+.fileuploadvideo { margin-right: 2px; color: #666; position: relative; top: -3px; font-size: 215%; }
+.fileuploadimage { width: 20px; height: auto; margin-right: 5px; }
 .share { width: 20px; height: auto; font-weight: bold;}
 .healthimage ul { margin-top: 15px; }
 .healthimage ul li { float: left; width: 120px; height: auto; margin-right: 15px; position: relative; margin-top: 15px;  }
@@ -69,11 +72,14 @@ ul.sociallinks li img { width: 100%; height: auto; }
 ul.sociallinks li:nth-child(3n) { margin-right: 0; }
 .modalsocial { padding: 10px 24px 0!important;}
 
-.settinglist li { margin-bottom: 10px; position: relative; }
-.settinglist li:after { position: absolute; top: 5px; right: 2px; background: url('/images/more.png') no-repeat; background-size: 40% 40%; width: 12px; height: 28px; content: '';}
+.settinglist li { position: relative; }
+.settinglist li:after { position: absolute; top: 16px; right: 2px; background: url('/images/more.png') no-repeat; background-size: 40% 40%; width: 12px; height: 28px; content: '';}
 .settinglist li:last-child:after { background: none; }
-.settinglist li a { color: #666; display: block; padding: 1px 1px 5px 1px; border-bottom: 1px solid #16a085; font-weight: bold; }
+.settinglist li a { color: #666; display: block; line-height: 3rem; font-weight: bold; }
 .settinglist li a i { display: inline-block; vertical-align: middle; color: #16a085;}
+
+.collapsible-header { color: #666; font-weight: bold; }
+.collapsible-header i { font-weight: normal; color: #16a085;}
 
 @media screen and (max-width: 835px) {
 	header.active .searchbar {

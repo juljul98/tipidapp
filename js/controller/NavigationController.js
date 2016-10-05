@@ -1,6 +1,6 @@
 tipidapp.controller('NavigationController', function($scope, $rootScope, $window) {
 
-	$scope.navigation = ['home', 'tools', 'settings'];
+	$scope.navigation = ['home', 'diary', 'settings'];
 	$scope.activeMenu = $scope.navigation[0];
 
     $scope.setActive = function(navigation) {

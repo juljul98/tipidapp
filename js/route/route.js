@@ -16,10 +16,14 @@ tipidapp.config(function($routeProvider) {
 		templateUrl : 'pages/dashboard/home.html',
 		controller: 'HomeController'
 	})
-	.when('/tools', {
-		templateUrl : 'pages/dashboard/tools.html'
+	.when('/diary', {
+		templateUrl : 'pages/dashboard/diary.html'
 	})
 	.when('/settings', {
 		templateUrl : 'pages/dashboard/settings.html'
+	})
+	.when('/appsettings', {
+		templateUrl : 'pages/dashboard/settings/appsettings.html',
+		controller : 'AppSettingsController'
 	})
 });
