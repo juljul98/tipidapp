@@ -20,12 +20,12 @@ p { margin: 0; }
 .register-form { margin-top: 20px!important;}
 .login-form-text { font-weight: bold; font-size: 138%; }
 .login-form, .forgot-form { position: fixed; top: 50%; left: 0; right: 0; margin: 0 2rem; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); }
-.modal { z-index: 9999; top: 0; }
+.modal { z-index: 999; top: 0; }
 .has-error input { border-bottom: 1px solid #c0392b; }
 .has-error label, .has-error .err-message { color: #c0392b; }
 .err-message { text-align: left; margin-top: 0!important; font-size: 107%; }
 
-.headerblock { position: fixed; top: 0; width: 100%; }
+.headerblock { position: fixed; top: 0; width: 100%; z-index: 9999; }
 header { height: 60px;  font-weight: bold; background-color: #16a085; padding: .5rem 0; color: #fff; border-bottom: 1px dotted #fff; position: relative;}
 .backbutton img, .searchbar, .searchbutton, .apptitle, .settinglist li i.tar { position: absolute; top: 50%; transform: translateY(-50%); }
 .backbutton img { width: 23px; height: auto; left: 10px;}
@@ -92,7 +92,11 @@ ul.sociallinks li:nth-child(3n) { margin-right: 0; }
 .collapsible-body { padding: .5rem 2rem!important; }
 .collapsible-body p { padding: 0!important; }
 .settingtitle { font-weight: bold; }
+.settingtitle span { font-size: 80%; margin-left: 10px; }
 .settingtitle, .fontfamily, .fontsize { margin-bottom: 8px; }
+li.settingtitle { margin-bottom: 0; }
+.devposition { font-size: 80%; }
+
 
 @media screen and (max-width: 835px) {
 	header.active .searchbar {

@@ -1,4 +1,5 @@
-tipidapp.controller('AppSettingsController', function($scope) {
+tipidapp.controller('AppSettingsController', function ($rootScope, $scope) {
+
    $scope.load = function() {
        $('.collapsible').collapsible({
       		accordion : false

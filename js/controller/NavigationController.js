@@ -1,4 +1,8 @@
-tipidapp.controller('NavigationController', function($scope, $rootScope, $window) {
+tipidapp.controller('NavigationController', ['$scope', '$rootScope', '$route', function ($scope, $rootScope, $route) {
+
+    $rootScope.$on('$routeChangeSuccess', function() {
+        $scope.title = $route.current.title;
+    });
 
 	$scope.navigation = ['home', 'diary', 'settings'];
 	$scope.activeMenu = $scope.navigation[0];
@@ -23,7 +27,9 @@ tipidapp.controller('NavigationController', function($scope, $rootScope, $window
 			action = false;
 		}
 	}
-	$rootScope.backbutton = function() {
-		$window.history.back();
+
+	$scope.backbutton = function() {
+		window.history.back(-1);
 	}
-});
+
+}]);
